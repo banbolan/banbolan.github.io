@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>A test md</title>
+      <link href="2020/09/23/A-test-md/"/>
+      <url>2020/09/23/A-test-md/</url>
+      
+        <content type="html"><![CDATA[<p>这是一个摘要</p><a id="more"></a><p>这里是正文内容</p><p>这里也是正文内容</p><h3 id="hexo-的写作"><a href="#hexo-的写作" class="headerlink" title="hexo 的写作"></a>hexo 的写作</h3><h3 id="1-创建一个新的文章或者页面：-hexo-new-layout-lt-title-gt"><a href="#1-创建一个新的文章或者页面：-hexo-new-layout-lt-title-gt" class="headerlink" title="1.创建一个新的文章或者页面： hexo new [layout] &lt;title&gt;"></a>1.创建一个新的文章或者页面：<code> hexo new [layout] &lt;title&gt;</code></h3><ol><li>布局Layout 这个在根目录的_config.yml文件中<ol><li><code> post</code> 保存路径 :<code> source/_posts</code></li><li><code> page</code> 保存路径:<code> source</code></li><li><code> draft</code> 保存路径: <code> source/_drafts</code> </li></ol></li><li>文件名称<ol start="3"><li>默认以标题作为文件名称，但是可以输入<code> new_post_name</code>参数改变默认的文件名称 </li><li>eg: <code> :year-:month-:day-:title.md</code></li><li><code>:title</code> :标题，空格会被替换为短杠</li><li><code> :year</code>:年份，2018</li><li><code> :mouth</code> :月份，04</li><li><code> :i_mouth</code>: 月份，4</li><li><code> :day</code> :日期，07</li><li><code> :i_day</code>:日期，7</li></ol></li><li>草稿<ol start="5"><li>可以通过<code> --draft</code> 查看草稿，eg：<code> hexo server --draft</code></li><li>可以通过<code> publish</code>发布草稿或者页面，将其移动到指定的文件夹下:<code> hexo publish [layout] &lt;title&gt;</code></li></ol></li><li>模板</li><li>Hexo会根据<code> scaffolds</code> 中的文件建立文件</li><li>eg: <code> hexo new photo &quot;My Gallery&quot;</code>命令会寻找<code> photo.md</code>文件</li></ol><h4 id="2-Front-matter"><a href="#2-Front-matter" class="headerlink" title="2. Front-matter"></a>2. Front-matter</h4><pre class=" language-javascript"><code class="language-javascript">    <span class="token operator">--</span><span class="token operator">-</span>    title<span class="token punctuation">:</span> Hello World    date<span class="token punctuation">:</span> <span class="token number">2013</span><span class="token operator">/</span><span class="token number">7</span><span class="token operator">/</span><span class="token number">13</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">46</span><span class="token punctuation">:</span><span class="token number">25</span>    <span class="token operator">--</span><span class="token operator">-</span></code></pre><p>上述代码为Front-matter的一个示例，用于指定个别文件的变量。</p><table><thead><tr><th>参数</th><th>描述</th><th>默认值</th></tr></thead><tbody><tr><td><code> layout</code></td><td>布局</td><td></td></tr><tr><td><code> title</code></td><td>标题</td><td>文章的文件名</td></tr><tr><td><code> date</code></td><td>建立日期</td><td>文章的建立日期</td></tr><tr><td><code> updated</code></td><td>更新日期</td><td>文章的更新日期</td></tr><tr><td><code> comments</code></td><td>开启评论</td><td>true</td></tr><tr><td><code> tags</code></td><td>标签，不用于分页</td><td></td></tr><tr><td><code> categories</code></td><td>分类，不用于分页</td><td></td></tr><tr><td><code> permalinlk</code></td><td>覆盖文章的网址</td><td></td></tr></tbody></table><ul><li><p>分类和标签</p><ul><li>分类有层次性，顺序性，标签没有层次和顺序</li></ul><pre class=" language-javascript"><code class="language-javascript">   categories<span class="token punctuation">:</span>   <span class="token operator">-</span> Diary  ###注意这里的短横线之后有一个空格   tags<span class="token punctuation">:</span>   <span class="token operator">-</span> PS3   <span class="token operator">-</span> Games</code></pre></li></ul><h4 id="3-文章摘要"><a href="#3-文章摘要" class="headerlink" title="3. 文章摘要"></a>3. 文章摘要</h4><pre class=" language-javascript"><code class="language-javascript">    <span class="token operator">--</span><span class="token operator">-</span>    title<span class="token punctuation">:</span> 摘要示例    date<span class="token punctuation">:</span> <span class="token number">2020</span><span class="token operator">-</span><span class="token number">9</span><span class="token operator">-</span><span class="token number">23</span> <span class="token number">12</span><span class="token punctuation">:</span><span class="token number">49</span><span class="token punctuation">:</span><span class="token number">45</span>    tags<span class="token punctuation">:</span>    <span class="token operator">-</span> hello    <span class="token operator">-</span> hexo    <span class="token operator">--</span><span class="token operator">-</span>    这是一个摘要    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> more <span class="token operator">--</span><span class="token operator">></span></code></pre><h4 id="4-资源-Asset-引用"><a href="#4-资源-Asset-引用" class="headerlink" title="4. 资源(Asset)引用"></a>4. 资源(Asset)引用</h4><ol><li><p>其代表除了<code> source</code> 文件夹中除了文章之外的所有文件。例如图片，css，js文件等。如果hexo中只有少量的图片，可把他们放在<code> source/images</code> 中。</p></li><li><p>文章资源文件夹：有规律的组织图片内容分布到各个文章上。首先在<code> _config.yml</code> 将 <code> post_asset_folder</code> 选择为<code> true</code>来打开。在资源文件管理功能打开之后，每一次使用<code> hexo new [layout] &lt;title&gt;</code>命令时会创建一个新的文件夹命名与该文章文件一致，之后可通过相对路径引用该关联文件夹中的内容。</p></li><li><p>相对路径引用的标签插件</p></li></ol><pre class=" language-javascript"><code class="language-javascript"><span class="token template-string"><span class="token string">``</span></span><span class="token template-string"><span class="token string">`    &amp;#123;% asset_path slug %&amp;#125;    &amp;#123;% asset_img slug [title] %&amp;#125;    &amp;#123;% asset_link slug [title] %&amp;#125;`</span></span><span class="token template-string"><span class="token string">``</span></span>通过常规的markdown语法<span class="token template-string"><span class="token string">` ![](example.jpg)`</span></span> 不会出现在首页上，但是可通过以下方法引用<span class="token template-string"><span class="token string">` &amp;#123;% asset_img example.jpg This is an example image %&amp;#125;`</span></span> </code></pre><p>​    </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test1 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hello </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2020/09/22/hello-world/"/>
+      <url>2020/09/22/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
