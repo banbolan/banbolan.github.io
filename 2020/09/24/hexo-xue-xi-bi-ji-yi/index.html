@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="友情链接, 这是一个关键字">
+    <meta name="keywords" content="hexo学习笔记(一), 这是一个关键字">
     <meta name="description" content="这是一个描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>友情链接 | banbolan个人博客</title>
+    <title>hexo学习笔记(一) | banbolan个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -390,12 +390,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">友情链接</h1>
+                    <h1 class="description center-align post-title">hexo学习笔记(一)</h1>
                 </div>
             </div>
         </div>
@@ -510,12 +510,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                学习笔记
+                            </a>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS/" class="post-category">
+                                CS
+                            </a>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS/hexo/" class="post-category">
+                                hexo
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -524,7 +545,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-22
+                    2020-09-24
                 </div>
                 
 
@@ -533,7 +554,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    286
                 </div>
                 
 
@@ -545,7 +566,37 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h3><h4 id="1-文章的书写"><a href="#1-文章的书写" class="headerlink" title="1. 文章的书写"></a>1. 文章的书写</h4><p><code> hexo new [layout] &lt;title&gt;</code> </p>
+<p>eg: <code> hexo new &quot;post title with whitespace&quot;</code> 其中 layout为_config.yml中的默认参数值。</p>
+<ul>
+<li><code> -p --path</code> 自定义新文章</li>
+<li><code> -r --replace</code> 存在同名文章，替换</li>
+<li><code> -s --slug</code> 文章的slug，作为新文章的文件名和发布后的URL</li>
+</ul>
+<p>eg： <code>hexo new page --path about/me &quot;About me&quot;</code></p>
+<h4 id="2-生成静态文件"><a href="#2-生成静态文件" class="headerlink" title="2. 生成静态文件"></a>2. 生成静态文件</h4><p><code> hexo generate</code> 或 <code> hexo g</code></p>
+<ul>
+<li><code> -d 或--deploy</code> 文件生成后部署网站</li>
+<li><code> -w 或--watch</code> 监视文件变动</li>
+<li><code> -b 或--bail</code> 生成过程中出现异常则抛出。</li>
+<li><code> -f 或--force</code> 强制重新生成文件</li>
+<li><code> -c 或--concurrency</code> 最大同时生成文件数量，默认无限制。</li>
+</ul>
+<h4 id="3-发布草稿"><a href="#3-发布草稿" class="headerlink" title="3. 发布草稿"></a>3. 发布草稿</h4><p><code> hexo publish [layout] &lt;filename&gt;</code></p>
+<h4 id="4-启动服务器"><a href="#4-启动服务器" class="headerlink" title="4.启动服务器"></a>4.启动服务器</h4><p><code> hexo server</code> 启动服务器，ctrl+c 结束，默认地址为：<code> http://localhost:4000/</code></p>
+<h4 id="5-部署网站"><a href="#5-部署网站" class="headerlink" title="5.部署网站"></a>5.部署网站</h4><p><code> hexo deploy</code> 或<code> hexo d</code></p>
+<ul>
+<li><code> -g 或--generate</code> 部署之前写成静态文件</li>
+</ul>
+<h4 id="6-渲染文件"><a href="#6-渲染文件" class="headerlink" title="6.渲染文件"></a>6.渲染文件</h4><p><code> hexo render &lt;file1&gt; [file2]</code></p>
+<ul>
+<li><code> -o或--output</code> 设置输出路径</li>
+</ul>
+<h4 id="7-清除缓存文件"><a href="#7-清除缓存文件" class="headerlink" title="7. 清除缓存文件"></a>7. 清除缓存文件</h4><p><code> hexo clean</code></p>
+<h4 id="8-列出网站资料"><a href="#8-列出网站资料" class="headerlink" title="8. 列出网站资料"></a>8. 列出网站资料</h4><p><code> hexo list &lt;type&gt;</code></p>
+<h4 id="9-显示草稿"><a href="#9-显示草稿" class="headerlink" title="9. 显示草稿"></a>9. 显示草稿</h4><p><code> hexo --deaft</code></p>
+<h4 id="10-自定义当前工作目录"><a href="#10-自定义当前工作目录" class="headerlink" title="10. 自定义当前工作目录"></a>10. 自定义当前工作目录</h4><p><code> hexo --cwd /path/to/cwd</code></p>
+
             </div>
             <hr/>
 
@@ -570,7 +621,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://banbolan.github.io/link/index.html">http://banbolan.github.io/link/index.html</a>
+                    <a href="http://banbolan.github.io/2020/09/24/hexo-xue-xi-bi-ji-yi/">http://banbolan.github.io/2020/09/24/hexo-xue-xi-bi-ji-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,7 +658,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -652,13 +707,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/link/index.html">
+                <a href="/2020/09/24/hexo-xue-xi-bi-ji-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="友情链接">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="hexo学习笔记(一)">
                         
-                        <span class="card-title">友情链接</span>
+                        <span class="card-title">hexo学习笔记(一)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -669,17 +724,37 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            banbolan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS/" class="post-category">
+                                    CS
+                                </a>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CS/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -687,37 +762,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/link/index.html">
+                <a href="/2020/09/23/a-test-md/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="友情链接">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="A test md">
                         
-                        <span class="card-title">友情链接</span>
+                        <span class="card-title">A test md</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            这是一个摘要
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            banbolan
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/test1/" class="post-category">
+                                    test1
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/hello/">
+                        <span class="chip bg-color">hello</span>
+                    </a>
+                    
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

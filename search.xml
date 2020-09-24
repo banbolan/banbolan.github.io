@@ -2,6 +2,64 @@
 <search> 
   
   
+    
+    <entry>
+      <title>hexo学习笔记(一)</title>
+      <link href="2020/09/24/hexo-xue-xi-bi-ji-yi/"/>
+      <url>2020/09/24/hexo-xue-xi-bi-ji-yi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h3><h4 id="1-文章的书写"><a href="#1-文章的书写" class="headerlink" title="1. 文章的书写"></a>1. 文章的书写</h4><p><code> hexo new [layout] &lt;title&gt;</code> </p><p>eg: <code> hexo new &quot;post title with whitespace&quot;</code> 其中 layout为_config.yml中的默认参数值。</p><ul><li><code> -p --path</code> 自定义新文章</li><li><code> -r --replace</code> 存在同名文章，替换</li><li><code> -s --slug</code> 文章的slug，作为新文章的文件名和发布后的URL</li></ul><p>eg： <code>hexo new page --path about/me &quot;About me&quot;</code></p><h4 id="2-生成静态文件"><a href="#2-生成静态文件" class="headerlink" title="2. 生成静态文件"></a>2. 生成静态文件</h4><p><code> hexo generate</code> 或 <code> hexo g</code></p><ul><li><code> -d 或--deploy</code> 文件生成后部署网站</li><li><code> -w 或--watch</code> 监视文件变动</li><li><code> -b 或--bail</code> 生成过程中出现异常则抛出。</li><li><code> -f 或--force</code> 强制重新生成文件</li><li><code> -c 或--concurrency</code> 最大同时生成文件数量，默认无限制。</li></ul><h4 id="3-发布草稿"><a href="#3-发布草稿" class="headerlink" title="3. 发布草稿"></a>3. 发布草稿</h4><p><code> hexo publish [layout] &lt;filename&gt;</code></p><h4 id="4-启动服务器"><a href="#4-启动服务器" class="headerlink" title="4.启动服务器"></a>4.启动服务器</h4><p><code> hexo server</code> 启动服务器，ctrl+c 结束，默认地址为：<code> http://localhost:4000/</code></p><h4 id="5-部署网站"><a href="#5-部署网站" class="headerlink" title="5.部署网站"></a>5.部署网站</h4><p><code> hexo deploy</code> 或<code> hexo d</code></p><ul><li><code> -g 或--generate</code> 部署之前写成静态文件</li></ul><h4 id="6-渲染文件"><a href="#6-渲染文件" class="headerlink" title="6.渲染文件"></a>6.渲染文件</h4><p><code> hexo render &lt;file1&gt; [file2]</code></p><ul><li><code> -o或--output</code> 设置输出路径</li></ul><h4 id="7-清除缓存文件"><a href="#7-清除缓存文件" class="headerlink" title="7. 清除缓存文件"></a>7. 清除缓存文件</h4><p><code> hexo clean</code></p><h4 id="8-列出网站资料"><a href="#8-列出网站资料" class="headerlink" title="8. 列出网站资料"></a>8. 列出网站资料</h4><p><code> hexo list &lt;type&gt;</code></p><h4 id="9-显示草稿"><a href="#9-显示草稿" class="headerlink" title="9. 显示草稿"></a>9. 显示草稿</h4><p><code> hexo --deaft</code></p><h4 id="10-自定义当前工作目录"><a href="#10-自定义当前工作目录" class="headerlink" title="10. 自定义当前工作目录"></a>10. 自定义当前工作目录</h4><p><code> hexo --cwd /path/to/cwd</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+          <category> CS </category>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>A test md</title>
+      <link href="2020/09/23/a-test-md/"/>
+      <url>2020/09/23/a-test-md/</url>
+      
+        <content type="html"><![CDATA[<p>这是一个摘要</p><a id="more"></a><p>这里是正文内容</p><p>这里也是正文内容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test1 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> hello </tag>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
