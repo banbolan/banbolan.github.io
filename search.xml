@@ -31,35 +31,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>A test md</title>
-      <link href="2020/09/23/a-test-md/"/>
-      <url>2020/09/23/a-test-md/</url>
-      
-        <content type="html"><![CDATA[<p>这是一个摘要</p><a id="more"></a><p>这里是正文内容</p><p>这里也是正文内容</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> test1 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-            <tag> hello </tag>
-            
-            <tag> markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
